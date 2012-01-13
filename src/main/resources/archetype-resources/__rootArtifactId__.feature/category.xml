@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/${rootArtifactId}.feature_${version}.jar" id="${rootArtifactId}.feature" version="${version}">
+      <category name="m2e.settings"/>
+   </feature>
+   <category-def name="m2e.${category}" label="m2e ${category}">
+      <description>
+         IDE configuration from Maven artifact ${category}.
+      </description>
+   </category-def>
+</site>

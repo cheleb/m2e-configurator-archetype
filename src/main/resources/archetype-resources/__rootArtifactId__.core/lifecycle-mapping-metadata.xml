@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<lifecycleMappingMetadata>
+	<pluginExecutions>
+
+		<pluginExecution>
+			<pluginExecutionFilter>
+				<groupId>${mojoGroupId}</groupId>
+				<artifactId>${mojoArtifactId}</artifactId>
+				<versionRange>${mojoVersionRange}</versionRange>
+				<goals>
+					<goal>${mojoGoal}</goal>
+				</goals>
+			</pluginExecutionFilter>
+			<action>
+				<configurator>
+					<id>${artifactId}.configurator.${classPrefix}Configurator</id>
+				</configurator>
+			</action>
+		</pluginExecution>
+		
+	</pluginExecutions>
+	
+	
+	
+</lifecycleMappingMetadata>

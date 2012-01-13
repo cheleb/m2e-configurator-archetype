@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+         point="org.eclipse.m2e.core.lifecycleMappingMetadataSource">
+   </extension> 
+     <extension
+           point="org.eclipse.m2e.core.projectConfigurators">
+        <configurator
+              class="${artifactId}.configurator.${classPrefix}Configurator"
+              id="${artifactId}.configurator.${classPrefix}Configurator"
+              name="Agilent I18N"
+              >
+        </configurator>
+     </extension>
+</plugin>

@@ -14,6 +14,6 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-	<name>Maven Integration for Eclipse Settings</name>
+	<name>Maven Integration for ${name}</name>
 
 </project>

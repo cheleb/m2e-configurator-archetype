@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (c) 2008 Sonatype, Inc. All rights reserved. This program 
-	and the accompanying materials are made available under the terms of the 
-	Eclipse Public License v1.0 which accompanies this distribution, and is available 
-	at http://www.eclipse.org/legal/epl-v10.html --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -15,9 +13,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>eclipse-feature</packaging>
 
-	<name>Maven Integration for Eclipse Settings (Optional)</name>
-
-
+	<name>Maven Integration for Eclipse ${name}</name>
 
 	<build>
 		<plugins>
@@ -35,8 +31,6 @@
 					<deployableFeature>true</deployableFeature>
 				</configuration>
 			</plugin>
-			
-			
 
 			<plugin>
 				<groupId>org.sonatype.tycho</groupId>
@@ -58,45 +52,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
 				<configuration>
-					<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
 					<source>1.6</source>
 					<target>1.6</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 
 		</plugins>
 	</build>
 
-	<profiles>
-		<profile>
-			<id>publish-site</id>
-
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>maven-upload-plugin</artifactId>
-						<version>0.0.1</version>
-						<executions>
-							<execution>
-								<id>publish-site</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>upload-file</goal>
-								</goals>
-								<configuration>
-									<file>${project.build.directory}/${project.artifactId}-${project.version}-site.zip</file>
-									<serverId>forge-releases</serverId>
-									<repositoryUrl>${m2e.site-compressed}</repositoryUrl>
-									<repositoryPath>m2eclipse-ajdt/${unqualifiedVersion}/N/${unqualifiedVersion}.${buildQualifier}</repositoryPath>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 
 </project>

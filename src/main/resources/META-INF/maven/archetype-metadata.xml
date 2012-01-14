@@ -6,6 +6,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<requiredProperties>
+	   <requiredProperty key="tychoVersion">
+	     <defaultValue>0.13.0</defaultValue>
+	   </requiredProperty>
 	    <requiredProperty key="name" />
 	    <requiredProperty key="configuratorName">
 	     <defaultValue>${name} configurator</defaultValue>

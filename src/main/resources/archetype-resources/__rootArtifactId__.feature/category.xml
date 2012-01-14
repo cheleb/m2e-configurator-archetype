@@ -1,12 +1,18 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $snapshot = ${version.indexOf("-SNAPSHOT")} ) 
+#if( $snapshot > 0 )
+#set( $pluginVersion = "${version.substring(0, $snapshot)}.qualifier" )
+#else
+#set( $pluginVersion = ${version} )
+#end
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/${rootArtifactId}.feature_${version}.jar" id="${rootArtifactId}.feature" version="${version}">
-      <category name="m2e.settings"/>
+   <feature url="features/${rootArtifactId}.feature_${pluginVersion}.jar" id="${rootArtifactId}.feature" version="${pluginVersion}">
+      <category name="${category}"/>
    </feature>
-   <category-def name="m2e.${category}" label="m2e ${category}">
+   <category-def name="${category}" label="${category}">
       <description>
          IDE configuration from Maven artifact ${category}.
       </description>

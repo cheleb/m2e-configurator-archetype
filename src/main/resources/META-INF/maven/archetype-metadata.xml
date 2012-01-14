@@ -6,6 +6,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<requiredProperties>
+	    <requiredProperty key="name" />
+	    <requiredProperty key="configuratorName">
+	     <defaultValue>${name} configurator</defaultValue>
+	    </requiredProperty>
 	    <requiredProperty key="category" />
 		<requiredProperty key="classPrefix" />
 		<requiredProperty key="mojoGroupId" />
@@ -72,17 +76,9 @@
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory></directory>
 					<includes>
-						<include>.classpath</include>
-						<include>.project</include>
 						<include>build.properties</include>
 						<include>lifecycle-mapping-metadata.xml</include>
 						<include>plugin.xml</include>
-					</includes>
-				</fileSet>
-				<fileSet encoding="UTF-8">
-					<directory></directory>
-					<includes>
-						<include>.gitignore</include>
 					</includes>
 				</fileSet>
 			</fileSets>
@@ -99,16 +95,9 @@
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory></directory>
 					<includes>
-						<include>.project</include>
 						<include>build.properties</include>
 						<include>category.xml</include>
 						<include>feature.xml</include>
-					</includes>
-				</fileSet>
-				<fileSet encoding="UTF-8">
-					<directory></directory>
-					<includes>
-						<include>.gitignore</include>
 					</includes>
 				</fileSet>
 			</fileSets>
@@ -131,14 +120,7 @@
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory></directory>
 					<includes>
-						<include>.project</include>
 						<include>site.xml</include>
-					</includes>
-				</fileSet>
-				<fileSet encoding="UTF-8">
-					<directory></directory>
-					<includes>
-						<include>.gitignore</include>
 					</includes>
 				</fileSet>
 			</fileSets>

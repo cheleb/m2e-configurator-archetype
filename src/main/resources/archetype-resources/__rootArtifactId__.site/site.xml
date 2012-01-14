@@ -1,13 +1,19 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $snapshot = ${version.indexOf("-SNAPSHOT")} ) 
+#if( $snapshot > 0 )
+#set( $pluginVersion = "${version.substring(0, $snapshot)}.qualifier" )
+#else
+#set( $pluginVersion = ${version} )
+#end
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description url="http://github.com/cheleb/m2e-settings/">
-      Maven Integration for Eclipse Extras
+   <description>
+      Maven Integration for Eclipse ${name}
    </description>
-   <feature url="features/${rootArtifactId}.feature_${version}.jar" id="${rootArtifactId}.feature" version="${version}">
-      <category name="m2e-settings"/>
+   <feature url="features/${rootArtifactId}.feature_${pluginVersion}.jar" id="${rootArtifactId}.feature" version="${pluginVersion}">
+      <category name="${category}"/>
    </feature>
-   <category-def name="m2e-settings" label="Maven Integration for Eclipse Settings"/>
+   <category-def name="${category}" label="Maven Integration for Eclipse ${name}"/>
 </site>

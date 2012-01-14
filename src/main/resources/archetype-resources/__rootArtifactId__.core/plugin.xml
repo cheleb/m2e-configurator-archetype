@@ -1,6 +1,8 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $symbol_dot = '.')
+#set ($configuratorId = "${artifactId}${symbol_dot}configurator.${classPrefix.substring(0,1).toLowerCase()}${classPrefix.substring(1)}Configurator")
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
@@ -11,8 +13,8 @@
            point="org.eclipse.m2e.core.projectConfigurators">
         <configurator
               class="${artifactId}.configurator.${classPrefix}Configurator"
-              id="${artifactId}.configurator.${classPrefix}Configurator"
-              name="Agilent I18N"
+              id="${configuratorId}"
+              name="${configuratorName}"
               >
         </configurator>
      </extension>

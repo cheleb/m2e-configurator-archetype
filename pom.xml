@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.orcades.maven.archetype</groupId>
-  <artifactId>eclipse-plugin-archetype</artifactId>
-  <version>1.1.1</version>
+  <artifactId>m2e-configurator-archetype</artifactId>
+  <version>1.0.0</version>
   <packaging>maven-archetype</packaging>
-  <name>Eclipse plugin archetype</name>
+  <name>m2e eclipse plugin archetype</name>
   <build>
     <extensions>
       <extension>
@@ -25,5 +25,5 @@
     </pluginManagement>
   </build>
   <description>Bootstrap eclipse m2e configurator.</description>
-  <url>https://github.com/cheleb/eclipse-plugin-archetype</url>
+  <url>https://github.com/cheleb/m2e-configurator-archetype</url>
 </project>

@@ -1,6 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set ($configuratorId = "${artifactId}${symbol_dot}configurator.${classPrefix.substring(0,1).toLowerCase()}${classPrefix.substring(1)}Configurator")
 <?xml version="1.0" encoding="UTF-8"?>
 <lifecycleMappingMetadata>
 	<pluginExecutions>
@@ -16,7 +17,7 @@
 			</pluginExecutionFilter>
 			<action>
 				<configurator>
-					<id>${artifactId}.configurator.${classPrefix}Configurator</id>
+					<id>${configuratorId</id>
 				</configurator>
 			</action>
 		</pluginExecution>

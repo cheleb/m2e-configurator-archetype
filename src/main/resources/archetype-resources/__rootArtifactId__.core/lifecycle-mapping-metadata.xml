@@ -17,7 +17,7 @@
 			</pluginExecutionFilter>
 			<action>
 				<configurator>
-					<id>${configuratorId</id>
+					<id>${configuratorId}</id>
 				</configurator>
 			</action>
 		</pluginExecution>

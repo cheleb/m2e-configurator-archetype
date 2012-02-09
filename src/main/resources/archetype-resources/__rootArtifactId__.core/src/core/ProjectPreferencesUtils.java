@@ -15,9 +15,15 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.Platform;
 import org.osgi.service.prefs.BackingStoreException;
 import org.osgi.service.prefs.Preferences;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class ProjectPreferencesUtils {
+import com.agilent.eclipse.m2e.buildnumber.core.ProjectPreferencesUtils;
 
+public final class ProjectPreferencesUtils {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProjectPreferencesUtils.class);
+	
 	static Preferences getPrefences(IProject project, String pref) {
 		return Platform.getPreferencesService().getRootNode()
 				.node("project/" + project.getName() + "/" + pref);
@@ -27,7 +33,7 @@ public class ProjectPreferencesUtils {
 			String pref) throws IOException, BackingStoreException {
 
 		if (inputStream == null) {
-			System.out.println("No settings for: " + pref);
+			LOGGER.debug("No settings for: " + pref);
 			return;
 		}
 		Preferences preferences = getPrefences(project, pref);
@@ -36,17 +42,14 @@ public class ProjectPreferencesUtils {
 				Charset.forName("utf8"));
 		Properties properties = new Properties();
 		properties.load(inStreamReader);
-		for (Enumeration<Object> e = properties.keys(); e.hasMoreElements(); /*
-																			 * NO-
-																			 * OP
-																			 */) {
+		for (Enumeration<Object> e = properties.keys(); e.hasMoreElements();) {
 			String key = (String) e.nextElement();
 			preferences.put(key, properties.getProperty(key));
 		}
 
 		preferences.flush();
 
-		System.out.println("Updated preferences: " + pref);
+		LOGGER.info("Updated preferences: " + pref);
 	}
 
 }

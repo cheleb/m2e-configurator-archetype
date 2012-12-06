@@ -18,8 +18,6 @@ import org.osgi.service.prefs.Preferences;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.agilent.eclipse.m2e.buildnumber.core.ProjectPreferencesUtils;
-
 public final class ProjectPreferencesUtils {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProjectPreferencesUtils.class);

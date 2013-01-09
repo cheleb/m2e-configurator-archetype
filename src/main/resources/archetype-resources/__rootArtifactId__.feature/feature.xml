@@ -10,8 +10,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="${artifactId}"
-      label="Eclipse ${name}"
-      version="${pluginVersion}">
+      label="${name}"
+      version="${pluginVersion}"
+      plugin="${rootArtifactId}.core">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -37,12 +38,12 @@
       <import plugin="org.eclipse.jface"/>
       <import plugin="org.eclipse.ui.navigator"/>
       <import plugin="org.eclipse.ui.workbench"/>
-      <import plugin="org.eclipse.m2e.maven.runtime" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.m2e.core" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.m2e.jdt" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.maven.runtime" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.core" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.jdt" version="1.2.0" match="greaterOrEqual"/>
       <import plugin="org.slf4j.api"/>
-      <import plugin="org.eclipse.m2e.core.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jdt.ui" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.core.ui" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.ui" version="3.8.1" match="greaterOrEqual"/>
    </requires>
 
    <plugin

@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+#set( $snapshot = ${version.indexOf("-SNAPSHOT")} ) 
+#if( $snapshot > 0 )
+#set( $pluginVersion = "${version.substring(0, $snapshot)}.qualifier" )
+#else
+#set( $pluginVersion = ${version} )
+#end
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="${name}" uid="${rootArtifactId}.product" version="${pluginVersion}" useFeatures="true" includeLaunchers="false">
+
+ <features>
+      <feature id="${rootArtifactId}.feature" version="${pluginVersion}"/>
+   </features>
+
+</product>

@@ -38,11 +38,11 @@
       <import plugin="org.eclipse.jface"/>
       <import plugin="org.eclipse.ui.navigator"/>
       <import plugin="org.eclipse.ui.workbench"/>
-      <import plugin="org.eclipse.m2e.maven.runtime" version="1.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.m2e.core" version="1.2.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.m2e.jdt" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.maven.runtime" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.core" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.jdt" version="1.6.0" match="greaterOrEqual"/>
       <import plugin="org.slf4j.api"/>
-      <import plugin="org.eclipse.m2e.core.ui" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2e.core.ui" version="1.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.ui" version="3.8.1" match="greaterOrEqual"/>
    </requires>
 
